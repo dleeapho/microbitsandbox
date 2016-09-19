@@ -10,6 +10,9 @@ display.show(circle)
 
 while True:
 
+    tgt_bright = 9
+    bubble_bright = 7
+
     scale = 30
     max_x = 2
     max_y = max_x
@@ -29,25 +32,25 @@ while True:
         ly = max_y
 
     if lx == 0 and ly == 0:
-        dotbrightness = 9
+        dot_brightness = tgt_bright
     else:
-        dotbrightness = 7
+        dot_brightness = bubble_bright
 
-    dotx = 2 - lx
-    doty = 2 - ly
+    dotx = max_x - lx
+    doty = max_y - ly
 
     background = display.get_pixel(dotx, doty)
-    display.set_pixel(dotx, doty, dotbrightness)
-    if dotbrightness == 9:
-        display.set_pixel(dotx + 1, doty, dotbrightness)
-        display.set_pixel(dotx - 1, doty, dotbrightness)
-        display.set_pixel(dotx, doty + 1, dotbrightness)
-        display.set_pixel(dotx, doty - 1, dotbrightness)
+    display.set_pixel(dotx, doty, dot_brightness)
+    if dot_brightness == tgt_bright:
+        display.set_pixel(dotx + 1, doty, dot_brightness)
+        display.set_pixel(dotx - 1, doty, dot_brightness)
+        display.set_pixel(dotx, doty + 1, dot_brightness)
+        display.set_pixel(dotx, doty - 1, dot_brightness)
         
     sleep(100)
     
     display.set_pixel(dotx, doty, background)   
-    if dotbrightness == 9:
+    if dot_brightness == tgt_bright:
         display.set_pixel(dotx + 1, doty, 0)
         display.set_pixel(dotx - 1, doty, 0)
         display.set_pixel(dotx, doty + 1, 0)
