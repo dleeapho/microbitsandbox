@@ -11,7 +11,7 @@ display.show(circle)
 while True:
 
     tgt_bright = 9
-    bubble_bright = 7
+    bubble_bright = 6
 
     scale = 30
     max_x = 2
