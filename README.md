@@ -1,5 +1,5 @@
 # microbitsandbox
-VS Code environment for microbit python development
+VS Code environment for microbit Python development
 - `pip install pseudo-microbit` installs the pseudo-microbit module from MrYsLab
 [https://github.com/MrYsLab/pseudo-microbit](https://github.com/MrYsLab/pseudo-microbit).
 Originally created for the PyCharm IDE but works well with VS Code
