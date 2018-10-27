@@ -1,11 +1,11 @@
 # A two-axis bubble level that uses the BBC microbit's accelerometer
-from microbit import *
+from microbit import display, accelerometer, sleep
 
-circle = Image( "02220:"
-                "20002:"
-                "20002:"
-                "20002:"
-                "02220:")
+circle = display.Image( "02220:"
+                        "20002:"
+                        "20002:"
+                        "20002:"
+                        "02220:")
 display.show(circle)
 
 while True:
@@ -17,7 +17,7 @@ while True:
     max_x = 2
     max_y = max_x
     
-    (lx, ly, lz) = accelerometer.get_values()
+    lx, ly, lz = accelerometer.get_values()
     lx = int(lx / scale)
     ly = int(ly / scale)
 
