@@ -14,9 +14,9 @@ def serve(from_x, from_y):
     is_inplay = True
     for setserve in range(0,3):
         sleep(150)
-        display.set_pixel(ballx, bally, 9)
+        display.set_pixel(from_x, from_y, 9)
         sleep(150)
-        display.set_pixel(ballx, bally, ballbright)
+        display.set_pixel(from_x, from_y, ballbright)
     return is_inplay, serving_speed
 
 def evaluate_turn(is_returned, position, current_speed, return_speed):
